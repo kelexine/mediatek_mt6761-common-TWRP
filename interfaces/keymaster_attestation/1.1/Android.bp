@@ -1,0 +1,15 @@
+hidl_interface {
+    name: "vendor.mediatek.hardware.keymaster_attestation@1.1",
+    root: "vendor.mediatek.hardware",
+    srcs: [
+        "types.hal",
+        "IKeymasterDevice.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0"
+    ],
+    types: [
+        "StatusCode",
+    ],
+    gen_java: true,
+}

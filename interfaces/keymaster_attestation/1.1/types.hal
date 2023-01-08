@@ -1,0 +1,9 @@
+package vendor.mediatek.hardware.keymaster_attestation@1.1;
+
+enum StatusCode : uint32_t {
+    OK = 0,
+    UNIMPLEMENTED = -1,
+    KEYINSTALLFAILED = -2,
+    UNKNOWN_ERROR = -1000,
+    KEYCHECKFAILED = -3,
+};

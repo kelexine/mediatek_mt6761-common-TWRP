@@ -1,0 +1,11 @@
+service tee-1-0 /system/bin/vendor.trustonic.tee@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service teeregistry-1-0 /system/bin/vendor.trustonic.teeregistry@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0

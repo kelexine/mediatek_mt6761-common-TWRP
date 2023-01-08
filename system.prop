@@ -1,0 +1,11 @@
+# TWRP properties
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+ro.treble.enabled=true
+persist.sys.usb.config=mtp,adb
+ro.vendor.mtk_emmc_support=1
+
+# Encryption
+ro.hardware.kmsetkey=trustonic
+ro.vendor.mtk_trustonic_tee_support=1

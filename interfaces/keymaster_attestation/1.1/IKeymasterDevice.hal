@@ -1,0 +1,6 @@
+package vendor.mediatek.hardware.keymaster_attestation@1.1;
+
+interface IKeymasterDevice {
+	attestKeyInstall(vec<uint8_t> data) generates (StatusCode response);
+	attestKeyCheck(vec<uint8_t> data) generates (StatusCode response);
+};
