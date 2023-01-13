@@ -1,18 +1,18 @@
 on init
 	symlink /system/lib64/hw/libMcGatekeeper.so /system/lib64/hw/gatekeeper.Wasp.so
-	symlink /system/lib64/hw/libMcGatekeeper.so /system/lib64/hw/gatekeeper.mt6750.so
+	symlink /system/lib64/hw/libMcGatekeeper.so /system/lib64/hw/gatekeeper.mt6761.so
 	symlink /system/lib64/hw/libMcTeeKeymaster.so /system/lib64/hw/keystore.Wasp.so
 	symlink /system/lib64/hw/libMcTeeKeymaster.so /system/lib64/hw/keystore.mt6761.so
 	symlink /system/lib64/hw/kmsetkey.default.so /system/lib64/hw/kmsetkey.trustonic.so
 
-service boot-hal-1-0 /system/bin/android.hardware.boot@1.0-service
+service boot-hal-1-1 /system/bin/android.hardware.boot@1.1-service
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
 
 on property:hwservicemanager.ready=true
-	start boot-hal-1-0
+	start boot-hal-1-1
 
 on fs
 	setprop sys.usb.ffs.aio_compat 1
