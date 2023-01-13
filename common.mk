@@ -13,8 +13,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_COPY_FILES += \
-#	$(call find-copy-subdir-files,*,$(COMMON_PATH)/recovery/root,recovery/root) \
 	$(DEVICE_PATH)/prebuilt/dtb.img:dtb.img
+#	$(call find-copy-subdir-files,*,$(COMMON_PATH)/recovery/root,recovery/root) \
 
 # A/B support
 AB_OTA_UPDATER := true
