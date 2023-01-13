@@ -97,6 +97,9 @@ TARGET_BOARD_PLATFORM := mt6761
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
+# Bypass Duplicate Library Errors
+BUILD_BROKEN_DUP_RULES := true
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
