@@ -55,12 +55,16 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# A/B
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Decryption
+PRODUCT_PACKAGES += libhidlmemory
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
