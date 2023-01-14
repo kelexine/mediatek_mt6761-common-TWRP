@@ -30,7 +30,7 @@
 - [X] Correct date
 
 ## Minor checks
-- [ ] MTP export
+- [X] MTP export
 - [X] reboot to bootloader
 - [X] reboot to recovery
 - [X] poweroff
@@ -38,7 +38,7 @@
 - [X] temperature
 - [ ] encrypted backups (no option)
 - [X] input devices via USB (USB-OTG) - keyboard, mouse and disks
-- [ ] USB mass storage export
+- [ ] USB mass storage export (Unable to test)
 - [X] set brightness
 - [X] vibrate
 - [X] screenshot
