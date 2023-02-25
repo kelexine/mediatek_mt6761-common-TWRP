@@ -70,4 +70,4 @@ PRODUCT_PACKAGES += libhidlmemory
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl \
     android.hardware.boot@1.1-service \
-	bootctl
+    bootctl
