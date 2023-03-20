@@ -1,6 +1,6 @@
 # TWRP Common device tree for Mediatek MT6761 devices
 - [x] Still testing but works on my Tecno Spark 8C device
-
+- [x] This branch is for devices with 64-bit kernel. For 32-bit kernel change branch to android-11-arm
 ```
 #
 # Copyright (C) 2022 TeamWin Recovery Project
