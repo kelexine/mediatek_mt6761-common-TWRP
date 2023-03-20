@@ -1,5 +1,5 @@
 # TWRP Common device tree for Mediatek MT6761 devices
-- [x] Still testing but works on my Tecno Spark 8C ddvicd
+- [x] Still testing but works on my Tecno Spark 8C device
 
 ```
 #
