@@ -35,6 +35,6 @@
         <version>30</version>
     </vendor-ndk>
     <system-sdk>
-        <version>28</version>
+        <version>30</version>
     </system-sdk>
 </compatibility-matrix>
