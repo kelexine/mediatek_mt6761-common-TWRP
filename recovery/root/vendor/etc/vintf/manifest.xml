@@ -1,26 +1,31 @@
 <!--
     Input:
-        manifest_target_level_p.xml
+        manifest.xml
+        manifest_target_level_r.xml
         manifest_sensor_hidl_v2.xml
         manifest_audio.xml
         manifest_dsds.xml
         manifest_radioconfig.xml
+        manifest_em.xml
         manifest_bgservice.xml
         manifest_wifi.xml
         manifest_videotelephony.xml
-        manifest_secure_element_dsds.xml
-        manifest_mtkcodecservice.xml
-        manifest_km3.xml
+        manifest_km4.xml
         manifest_tee.xml
         manifest_trustonic.xml
+        manifest_log.xml
+        manifest_mdmonitor.xml
+        manifest_aee.xml
         manifest_boot.xml
         manifest_netdagent.xml
         manifest_pq.xml
         manifest_mmservice.xml
         manifest_gnss.xml
+        manifest_tranlog.xml
+        manifest_tranlogconfig.xml
         manifest.xml
 -->
-<manifest version="2.0" type="device" target-level="3">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -82,16 +87,6 @@
         <fqname>@2.6::ICameraProvider/internal/0</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.configstore</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>ISurfaceFlingerConfigs</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -146,12 +141,12 @@
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -238,18 +233,6 @@
         <fqname>@1.0::IDevice/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-        </interface>
-        <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/SIM2</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -292,6 +275,28 @@
         <fqname>@1.1::IUsbGadget/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.focaltech.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFocalFingerprintService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFocalFingerprintService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.aee</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAee</name>
+            <instance>AEE</instance>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAee/AEE</fqname>
+        <fqname>@1.0::IAee/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -320,6 +325,16 @@
             <instance>internal/0</instance>
         </interface>
         <fqname>@1.1::IBGService/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.engineermode</name>
+        <transport>hwbinder</transport>
+        <version>1.3</version>
+        <interface>
+            <name>IEmd</name>
+            <instance>EmHidlServer</instance>
+        </interface>
+        <fqname>@1.3::IEmd/EmHidlServer</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
@@ -376,6 +391,32 @@
         <fqname>@1.0::ILbs/mtk_mtklogger2mnld</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.log</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILog</name>
+            <instance>ATMWiFiHidlServer</instance>
+            <instance>ConnsysFWHidlServer</instance>
+            <instance>MobileLogHidlServer</instance>
+            <instance>ModemLogHidlServer</instance>
+        </interface>
+        <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
+        <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
+        <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
+        <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.mdmonitor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMDMonitorService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IMDMonitorService/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
         <transport>hwbinder</transport>
         <version>1.5</version>
@@ -384,16 +425,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.5::IMms/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.mtkcodecservice</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IMtkCodecService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IMtkCodecService/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
@@ -501,6 +532,26 @@
         <fqname>@2.0::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.transsion.hardware.tranlog</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITranLog</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITranLog/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.transsion.hardware.tranlogconfig</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITranLogConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITranLogConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.trustonic.tee</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -523,4 +574,5 @@
     <sepolicy>
         <version>30.0</version>
     </sepolicy>
+    <kernel target-level="5"/>
 </manifest>
