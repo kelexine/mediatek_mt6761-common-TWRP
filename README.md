@@ -1,4 +1,5 @@
-# TWRP Common device tree for Nokia MT6761 devices
+# TWRP Common device tree for Mediatek MT6761 devices
+- [x] Still testing but works on my Tecno Spark 8C ddvicd
 
 ```
 #
@@ -7,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
-# Working features
+# Working features so far
 
 ## Blocking checks
 - [X] Correct screen/recovery size
